@@ -1,21 +1,16 @@
-check_updates() {
+check_network_connections() {
     echo "============================"
-    echo " System Update Checker"
-    echo " Date: $(date)"
+    echo " Active Network Connections"
     echo "============================"
+    
+    echo "Listening Ports:"
+    netstat -tuln | grep -v "Proto"
+    
     echo
+    
+    echo "Active Network Connections:"
+    netstat -tn | grep -v "Proto"
 
-    echo "Updating Package List"
-    sudo apt update -y
-
-    echo
-    echo "List of Upgradable Packages:"
-    echo "----------------------------"
-    apt list --upgradable
-
-    echo
-    echo "Update Check Complete."
     echo "============================"
 }
-check_updates
-
+check_network_connections
