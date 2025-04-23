@@ -1,5 +1,8 @@
-check_updates() {
-    echo "Checking for system updates..."
-    sudo apt update && sudo apt list --upgradable
+check_network_connections() {
+    echo "============================"
+    echo " Active Network Connections"
+    echo "============================"
+    netstat -tuln
+    echo "============================"
 }
-check_updates
+check_network_connections 
