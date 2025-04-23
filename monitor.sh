@@ -18,3 +18,4 @@ check_updates() {
     echo "============================"
 }
 check_updates
+
