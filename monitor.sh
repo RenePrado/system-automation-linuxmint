@@ -5,16 +5,16 @@ check_updates() {
     echo "============================"
     echo
 
-    echo "Updating package list..."
+    echo "Updating Package List"
     sudo apt update -y
 
     echo
-    echo "List of upgradable packages:"
+    echo "List of Upgradable Packages:"
     echo "----------------------------"
     apt list --upgradable
 
     echo
-    echo "Update check complete."
+    echo "Update Check Complete."
     echo "============================"
 }
 check_updates
